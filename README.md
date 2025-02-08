@@ -59,3 +59,12 @@ cd <project_directory>
     - Configure the backend service to connect to the MongoDB database
 
 ---
+
+## Run with docker-compose.yml
+
+```bash
+# directly run docker-compose in terminal
+docker-compose up -d --build
+
+
+```
