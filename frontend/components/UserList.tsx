@@ -22,7 +22,9 @@ export default function UserList() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get("/api/users");
+                const response = await axios.get(
+                    "http://localhost:5000/api/users",
+                );
                 const users = response.data.data;
 
                 setUsers(users);
@@ -37,7 +39,7 @@ export default function UserList() {
 
     const handleDelete = async (id: string) => {
         try {
-            await axios.delete(`/api/users/${id}`);
+            await axios.delete(`http://localhost:5000/api/users/${id}`);
             toast.success("User deleted successfully");
             setUsers(users.filter((user) => user._id !== id));
         } catch (error) {

@@ -28,7 +28,9 @@ export default function EditUser() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const res = await axios.get(`/api/users/${id}`);
+                const res = await axios.get(
+                    `http://localhost:5000/api/users/${id}`,
+                );
                 const user = res.data.data;
 
                 if (user) {
@@ -65,7 +67,10 @@ export default function EditUser() {
             email: data.email,
         };
         try {
-            await axios.put(`/api/users/${id}`, updatedData);
+            await axios.put(
+                `http://localhost:5000/api/users/${id}`,
+                updatedData,
+            );
             toast.success("User updated successfully!");
             router.push("/");
         } catch (error) {

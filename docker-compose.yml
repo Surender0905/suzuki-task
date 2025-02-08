@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
     frontend:
         build: ./frontend
@@ -7,11 +5,16 @@ services:
             - "3000:3000"
         networks:
             - mern
+        depends_on:
+            - backend
 
     backend:
         build: ./backend
         ports:
             - "5000:5000"
+
+        environment:
+            - MONGO_URI=mongodb://database:27017/task
         networks:
             - mern
         depends_on:
