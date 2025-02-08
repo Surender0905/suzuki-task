@@ -28,6 +28,7 @@ cd <project_directory>
     - Install dependencies: `npm install`
     - To start the frontend service, run `npm run dev`
     - To build the NextJS application, run `npm run build`
+    - port http://localhost:3000
 
     - Create a NextJS application to:
         - Display a list of users
@@ -52,6 +53,7 @@ cd <project_directory>
     - cd backend
     - Install dependencies: `npm install`
     - To start the backend service, run `npm start` in the backend directory
+    - port http://localhost:5000
 
 4. **Database (MongoDB)**:
 
